@@ -18,6 +18,50 @@
 }
 
 .card:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   cursor: pointer;
+}
+
+.title {
+  font-size: 22px;
+  color: white;
+  font-weight: 600;
+}
+.name:hover,
+.title:hover {
+  color: hsl(178, 100%, 50%);
+}
+
+.name {
+  color: white;
+}
+
+.image_container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 15px;
+}
+
+.image_overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 255, 255, 0.459);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  border-radius: inherit;
+  transition: opacity ease-out 0.3s;
+}
+
+.image_overlay:hover {
+  opacity: 1;
 }
